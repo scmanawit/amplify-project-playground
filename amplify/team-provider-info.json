@@ -23,6 +23,14 @@
       "StackName": "amplify-amplifyprojectplaygr-amplify-104511",
       "StackId": "arn:aws:cloudformation:ap-southeast-2:990838898128:stack/amplify-amplifyprojectplaygr-amplify-104511/3c94e330-c6c9-11ed-b149-0aae32d3ec08",
       "AmplifyAppId": "d1c6i68pb16oky"
+    },
+    "categories": {
+      "function": {
+        "nodeplayground": {
+          "deploymentBucketName": "amplify-amplifyprojectplaygr-amplify-104511-deployment",
+          "s3Key": "amplify-builds/nodeplayground-54634e774930466e7231-build.zip"
+        }
+      }
     }
   }
 }

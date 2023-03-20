@@ -1,1 +1,27 @@
-{}
+{
+  "function": {
+    "nodeplayground": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_nodeplayground_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nodeplayground"
+        }
+      ]
+    },
+    "AMPLIFY_function_nodeplayground_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nodeplayground"
+        }
+      ]
+    }
+  }
+}
