@@ -2,18 +2,31 @@ const { describe, expect, it } = require('@jest/globals');
 const { handler } = require('../src');
 
 describe('handler', () => {
-    test('returns the correct todo object', () => {
-      expect.assertions(1);
-      return handler().then(json => {
-        expect(json).toEqual({
-          userId: 1,
-          id: 1,
-          title: 'delectus aut autem',
-          completed: false,
-        });
+  it('returns the correct todo object', async () => {
+      const json = await handler();
+      expect(json).toEqual({
+        userId: 1,
+        id: 1,
+        title: 'delectus aut autem',
+        completed: false,
       });
-    });
   });
+});
+
+
+// describe('handler', () => {
+//     it('returns the correct todo object', () => {
+//       expect.assertions(1);
+//       return handler().then(json => {
+//         expect(json).toEqual({
+//           userId: 1,
+//           id: 1,
+//           title: 'delectus aut autem',
+//           completed: false,
+//         });
+//       });
+//     });
+//   });
 
 // describe('Addition', () => {
 //   const testName = 'addition';
