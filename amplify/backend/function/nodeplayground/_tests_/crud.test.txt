@@ -1,23 +1,20 @@
 const { describe, expect, it } = require('@jest/globals');
-const axios = require('axios');
 const { handler } = require('../src');
 const data = require('./data.json');
 
-jest.mock('axios');
 
-describe('Product CRUD operations', () => {
+describe('CRUD operations', () => {
+  let productId;
+
   test('should create a new product', async () => {
-    axios.post.mockResolvedValue({ status: 201, data: data.createProductResponse });
+    const product = data[0];
+    productId = await createProduct(product);
+    expect(productId).toBeDefined();
+  });
 
-    const event = {
-      httpMethod: 'POST',
-      body: JSON.stringify(data.createProductRequest),
-    };
-
-    const response = await handler(event);
-
-    expect(response.statusCode).toBe(201);
-    expect(JSON.parse(response.body)).toEqual(data.createProductResponse);
+  test('should read the created product', async () => {
+    const product = await readProduct(productId);
+    expect(product).toEqual({ ...data[0], id: productId });
   });
 
 });
