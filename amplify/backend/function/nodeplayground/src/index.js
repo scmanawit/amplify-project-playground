@@ -1,4 +1,15 @@
-exports.handler = async event => {
-    return fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => response.json());
-  };
+const axios = require('axios');
+
+exports.handler = async (event) => {
+  const { httpMethod, pathParameters, body } = event;
+
+  const url = 'https://jsonplaceholder.typicode.com/posts';
+
+  switch (httpMethod) {
+    case 'POST':
+      return axios.post(url, JSON.parse(body)).then((response) => ({
+        statusCode: response.status,
+        body: JSON.stringify(response.data),
+      }));
+  }
+};

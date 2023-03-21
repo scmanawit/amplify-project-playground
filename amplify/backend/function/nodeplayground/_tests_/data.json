@@ -1,0 +1,39 @@
+{
+  "createProductRequest": {
+    "userId": 1,
+    "title": "new product",
+    "body": "description",
+    "categoryId": 1,
+    "price": 9.99,
+    "tags": ["new", "product"]
+  },
+  "createProductResponse": {
+    "id": 101,
+    "userId": 1,
+    "title": "new product",
+    "body": "description",
+    "categoryId": 1,
+    "price": 9.99,
+    "tags": ["new", "product"]
+  },
+  "getProductResponse": {
+    "userId": 1,
+    "title": "existing product",
+    "body": "description",
+    "categoryId": 1,
+    "price": 9.99,
+    "tags": ["existing", "product"]
+  },
+  "updateProductRequest": {
+    "title": "updated product",
+    "price": 19.99
+  },
+  "updateProductResponse": {
+    "userId": 1,
+    "title": "updated product",
+    "body": "description",
+    "categoryId": 1,
+    "price": 19.99,
+    "tags": ["existing", "product"]
+  }
+}
