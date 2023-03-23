@@ -28,8 +28,11 @@
       "function": {
         "nodeplayground": {
           "deploymentBucketName": "amplify-amplifyprojectplaygr-amplify-104511-deployment",
-          "s3Key": "amplify-builds/nodeplayground-466a57514d3645555343-build.zip"
+          "s3Key": "amplify-builds/nodeplayground-5346704452512f386952-build.zip"
         }
+      },
+      "api": {
+        "amplifyprojectplaygr": {}
       }
     }
   }

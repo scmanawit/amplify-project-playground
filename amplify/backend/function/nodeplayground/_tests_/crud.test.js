@@ -1,5 +1,5 @@
 const { describe, expect, it } = require('@jest/globals');
-const { handler } = require("../src");
+const { handler } = require("../src/crud");
 const { createRequest } = require("./data.json");
 
 describe('CRUD test', () => {
