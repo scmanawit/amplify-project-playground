@@ -28,7 +28,7 @@
       "function": {
         "nodeplayground": {
           "deploymentBucketName": "amplify-amplifyprojectplaygr-amplify-104511-deployment",
-          "s3Key": "amplify-builds/nodeplayground-5346704452512f386952-build.zip"
+          "s3Key": "amplify-builds/nodeplayground-766a376a7a5562337168-build.zip"
         }
       },
       "api": {
